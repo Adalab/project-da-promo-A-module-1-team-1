@@ -5,7 +5,12 @@
                                                                             #tenéis que crear las carpetas: limpieza_proyecto en escritorio), prueba_proyecto en Descargas.
 
 import os 
+import shutil                                                               #intento de mover con shutil (no funciona) 
 os.getcwd()
+                                                                            #intento de mover con shutil (no funciona)
+origen = '/mnt/c/Users/a/Downloads/prueba_projecto1/data_xml.xml'           #intento de mover con shutil (no funciona)
+destino = "/mnt/c/Users/a/Desktop/limpieza_projecto/data_xml.xml"           #intento de mover con shutil (no funciona). Quitar data_xml.xml en destino??
+
                                                                             #Asumimos que el cliente va a hacer esto: descargar los archivos --> Carpeta por defecto Descargas.
 
 try:                                                                        
@@ -18,10 +23,14 @@ else:
 
 
                                                                             
-os.rename('C:/Users/a/Downloads/prueba_projecto1/data_txt.txt','C:/Users/a/Escritorio/limpieza_projecto')     #movemos archivo descargado a la carpeta definitiva  : limpieza proyecto
-                                                                            #abrimos carpeta TXT y XML (GUADA, LAU: XML. ALICIA, LARA: TXT)
-                                                                            #leemos archivo por líneas (read()--> sin argumento para todo el documento)
-                                                                            #cerramos carpeta o utilizamos WITH 
+# os.rename('/mnt/c/Users/a/Downloads/prueba_projecto1/data_xml.xml',"/mnt/c/Users/a/Desktop/limpieza_projecto/data_xml.xml")     #movemos archivo descargado a la carpeta definitiva  : limpieza proyecto
+shutil.move(origen, destino)                                                #intento de mover con shutil (no funciona)
+                                                                    
+ubic_archivo = open(destino)                                                #abrimos carpeta TXT y XML (GUADA, LAU: XML. ALICIA, LARA: TXT)                                           
+print(ubic_archivo.read())                                                  #leemos archivo por líneas (read()--> sin argumento para todo el documento)
+ubic_archivo.close()                                                        #cerramos carpeta o utilizamos WITH 
+                                                                            
+                                                                            
 
 
 
