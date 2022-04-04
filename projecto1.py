@@ -7,7 +7,7 @@
 import os 
 os.getcwd()
                                                                             #Asumimos que el cliente va a hacer esto: descargar los archivos --> Carpeta por defecto Descargas.
-os.mkdir('C:/Users/a/Escritorio/limpieza_projecto')                         #crear carpeta donde vamos a mover los archivos (carpeta definitiva: limpieza_proyecto) (tal vez un input para que lo de fina el cliente?)
+os.mkdir("/mnt/c/Users/a/Desktop/limpieza_projecto")                        #crear carpeta donde vamos a mover los archivos (carpeta definitiva: limpieza_proyecto) (tal vez un input para que lo de fina el cliente?)
 os.rename('C:/Users/a/Downloads/prueba_projecto1/data_txt.txt','C:/Users/a/Escritorio/limpieza_projecto')     #movemos archivo descargado a la carpeta definitiva  : limpieza proyecto
                                                                             #abrimos carpeta TXT y XML (GUADA, LAU: XML. ALICIA, LARA: TXT)
                                                                             #leemos archivo por líneas (read()--> sin argumento para todo el documento)
