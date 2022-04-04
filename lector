@@ -34,6 +34,13 @@ def lector():
 
     # os.open()
     # os.read()
+    
+#os.getcwd        
+nombre_archivo = 'data.txt'
+f = open('data.txt')
+lectura_archivo = f.read()
+f.close()
+
     # Corrección de fallos (...) y guardado de resultados en archivo_limpio.sql
     # fichero arreglado en ../limpieza_proyecto
     # os.rmdir("/limpieza_proyecto") (carpeta temporal)
