@@ -37,8 +37,12 @@ def lector():
     
 #os.getcwd        
 nombre_archivo = 'data.txt'
-f = open('data.txt')
-lectura_archivo = f.read()
+ubicacion_carpeta = '/home/adalaber/Escritorio/limpieza_proyecto'
+ubicacion_archivo = ubicacion_carpeta + '/' + nombre_archivo
+print(ubicacion_archivo)
+
+f = open(ubicacion_archivo)
+print(f.read())
 f.close()
 
     # Corrección de fallos (...) y guardado de resultados en archivo_limpio.sql
