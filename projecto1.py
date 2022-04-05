@@ -8,7 +8,7 @@ import os
 os.getcwd()
                                                                             #Asumimos que el cliente va a hacer esto: descargar los archivos --> Carpeta por defecto Descargas.
 
-try:                                                                        
+try:                                                                        #mirar si el try cumple todas las posibilidades
   os.mkdir("/mnt/c/Users/a/Desktop/limpieza_projecto")                      #crear carpeta donde vamos a mover los archivos (carpeta definitiva: limpieza_proyecto) (input para que lo de fina el cliente?)
 except OSError:                                                             #try/excep/else para que no nos de error si la carpeta ya existe
   print("La creación del directorio falló porque ya existe")
