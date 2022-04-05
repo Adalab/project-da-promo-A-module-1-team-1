@@ -2,43 +2,44 @@ import os
 
 
 def lector():
-    # La carpeta donde vamos a meter los archivos a leer debería eliminarse al final de cada uso del programa, por lo tanto se crearía cada vez.
 
     # INICIO
-    print("¡Hola! Con este programa vamos a preparar tu archivo .txt para que sea exportable a MySQL. Por favor, sigue las instrucciones:")
+    print("¡Hola! Con este programa vamos a preparar tu archivo .txt para que sea exportable a MySQL. Asegúrate de que el archivo a convertir está en esta misma carpeta:")
+    print(os.getcwd(), '\n')
 
-    origen = input(
-        "Pega aquí la ruta completa (incluido el nombre del archivo) del archivo a tratar:")
-    destino = input(
-        "Pega aquí la ruta de la carpeta donde quieres que te dejemos el archivo una vez esté preparado:")
-    # [!] Comprobar si la ruta es válida.
-
-    # DE LA RUTA ORIGEN, COGEMOS SOLO LA PARTE FINAL: EL NOMBRE
+    origen = "./data.txt"
+    destino = "./documentos_limpios"
     archivo = os.path.basename(origen)
 
-    # CREAMOS NUESTRA CARPETA DE TRABAJO EN EL DESTINO ELEGIDO (SI NO EXISTE YA)
+    # BUSCAMOS EL ARCHIVO
 
-    os.chdir(destino)
-    if os.listdir("limpieza_proyecto"):
-        pass
-    else:
-        os.mkdir("./limpieza_proyecto")
+    try:
+        archivo in os.listdir()
+        print("Hemos encontrado tu archivo, ¡te lo preparamos enseguida! \n")
+    except:
+        print("El archivo no está en la carpeta correcta. Asegúrate de trasladarlo a:")
+        print(os.getcwd(), '\n')
 
-    os.chdir("./limpieza_proyecto")
-    carpeta = destino + "/limpieza_proyecto"
+    # CREAMOS CARPETA DE DESTINO DE LOS ARCHIVOS RESULTANTES (YA LIMPIOS)
 
-    if os.listdir(archivo):
-        pass
-    else:
-        os.rename(origen, carpeta)
+    try:
+        os.mkdir("./documentos_limpios")
+        print("La carpeta 'documentos_limpios' ha sido creada. Allí encontrarás, en breves, tus documentos preparados. \n")
+    except:
+        print("La carpeta 'documentos_limpios' ya existe. Allí encontrarás, en breves, tus documentos preparados. \n")
 
-    # os.open()
-    # os.read()
-    # Corrección de fallos (...) y guardado de resultados en archivo_limpio.sql
-    # fichero arreglado en ../limpieza_proyecto
-    # os.rmdir("/limpieza_proyecto") (carpeta temporal)
+    #LECTURA Y LIMPIEZA DE ARCHIVO
+
+    with open(origen) as f:
+        f.read()
+        # BUSCAR ERRORES
+        # CORREGIR ERRORES
+        # TRASLADAR ARCHIVO NUEVO A documentos_limpios
+        print(f.readlines(5))
 
 
 lector()
 
 # "/home/adalaber/Escritorio/limpieza_proyecto/datos.txt"
+#sys.path.insert(0,ruta_archivos)
+
