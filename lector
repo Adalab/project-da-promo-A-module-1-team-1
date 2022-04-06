@@ -45,6 +45,12 @@ f = open(ubicacion_archivo)
 print(f.read())
 f.close()
 
+# Corrección de fallos:
+# - para poner las comas pegadas a la palabra que tiene delante, es decir, sin espacio
+limpiada = re.sub(' ,',',',ubicacion_archivo)
+limpiada = re.sub(' +\n','\n',limpiada)
+print(limpiada)
+
     # Corrección de fallos (...) y guardado de resultados en archivo_limpio.sql
     # fichero arreglado en ../limpieza_proyecto
     # os.rmdir("/limpieza_proyecto") (carpeta temporal)
