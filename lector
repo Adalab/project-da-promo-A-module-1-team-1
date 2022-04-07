@@ -49,7 +49,10 @@ f.close()
 # - para poner las comas pegadas a la palabra que tiene delante, es decir, sin espacio
 limpiada = re.sub(' ,',',',ubicacion_archivo)
 limpiada = re.sub(' +\n','\n',limpiada)
-print(limpiada)
+print(limpiada) (meter en el bucle)
+
+#buscar string que cumplan el patron como el de 'level' con finditer() = match object (meter en el bucle)
+#si son todos iguales, crear una lista y eliminarla
 
     # Corrección de fallos (...) y guardado de resultados en archivo_limpio.sql
     # fichero arreglado en ../limpieza_proyecto
