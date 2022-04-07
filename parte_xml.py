@@ -21,11 +21,6 @@ with open('data_xml.xml', 'r') as f:
 
 
 # PROBANDO CÓMO ELIMINAR FILA
-# Eliminar elemento del xml
-# https://stackoverflow.com/questions/3593204/how-to-remove-elements-from-xml-using-python
-# https://www.adamsmith.haus/python/examples/3595/xml-remove-a-subelement-from-an-xml-element
-# https://itqna.net/questions/4202/how-remove-element-xml-python
-
 
 # root.remove(b)
 # ElementTree.dump(root)
