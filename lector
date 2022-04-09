@@ -46,10 +46,23 @@ print(f.read())
 f.close()
 
 # Corrección de fallos:
-# - para poner las comas pegadas a la palabra que tiene delante, es decir, sin espacio
-limpiada = re.sub(' ,',',',ubicacion_archivo)
-limpiada = re.sub(' +\n','\n',limpiada)
-print(limpiada) (meter en el bucle)
+#utilizar métodos strings para los errores que ha dicho Alejandro.
+#acortar espacios, cambiar errores por null, cambiar los null por espacio vacio... 
+
+        limpieza_comas = "   ,"
+        for comas in range(len(limpieza_comas)):
+            comas = _1.replace("  ,",",")
+            print(comas)
+            
+        limpieza_errores = 'error'
+        for error in range(len(limpieza_errores)):
+            error = _1.replace('error', 'null')
+            print(error)
+
+        limpieza_null = "null"
+        for null in range(len(limpieza_null)):
+            null = _1.replace("null", "[]")
+            print(null)
 
 #buscar string que cumplan el patron como el de 'level' con finditer() = match object (meter en el bucle)
 #si son todos iguales, crear una lista y eliminarla
