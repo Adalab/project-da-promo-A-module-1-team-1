@@ -35,7 +35,13 @@ os.rename('C:/Users/a/Downloads/prueba_projecto1/data_txt.txt','C:/Users/a/Escri
 
 
 
-###LISTA DE ERRORES
+
+###########GUARDAR los archivos con ya limpiados
+
+
+
+
+### SOLO PARA CONSULTA. LISTA DE ERRORES
 #ESTE ES EL ESQUEMA DE LOS POSIBLES ERRORES A LIMPIAR HECHO EN GITHUB.
 #A TENERLO EN CUENTA MÁS ADELANTE.
 # Después de observar los archivos hemos llegado a la conclusión que los posibles errores de limpieza a solucionar son:
