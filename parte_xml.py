@@ -43,6 +43,9 @@ patron_eliminar_xml = '''<level_0>25969</level_0>
 na_probando = re.findall('\<level\_0\>\[\d]<\/level\_0\>',patron_eliminar_xml)
 
 print(na_probando)
+#elminacion=doc.find("xml")
+#eliminacion.remove(eliminacion.find("'\<level\_0\>\[\d]<\/level\_0\>")
+#La intencion es crear un bucle donde encuentre la palabra level por cada root y la elimine
 
 
 ## FOR para buscar e ese patrón en todo el documento xlm
