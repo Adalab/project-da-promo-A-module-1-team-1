@@ -33,6 +33,9 @@ with open('data_xml.xml', 'r') as f:
 #PROBANDO A BUSCAR EL PATRÓN DE LA FILA A ELIMINAR EN EL XML
 
 patron_eliminar_xml = '''<level_0>25969</level_0> 
+
+
+# CAMBIAR el elemento género en el xml?
 <index>25969</index> 
 <time>253</time>'''
 na_probando = re.findall('\<level\_0\>\[\d]<\/level\_0\>',string_xml)
