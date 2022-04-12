@@ -34,7 +34,7 @@ import pandas as pd
 sql = mysql.connector.connect(host ='localhost',user='root', database='leccion-2-sql', password='AlumnaAdalab')
 
 cursor = sql.cursor()
-limpieza_error = "UPDATE data_sql SET  = 'null' WHERE  = 'ERROR'"
+limpieza_error = "UPDATE data_sql SET Q10_Part_11 = 'null' WHERE Q10_Part_11 = 'ERROR'"
 
 try:
     cursor.execute(limpieza_error)
