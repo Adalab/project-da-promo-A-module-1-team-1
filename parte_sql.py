@@ -23,3 +23,32 @@ except mysql.connector.Error as err:
 mycursor.execute("SELECT * FROM customers")  
 results = mycursor.fetchall()
 print(results)
+
+
+
+
+
+import mysql.connector
+import pandas as pd
+
+sql = mysql.connector.connect(host ='localhost',user='root', database='leccion-2-sql', password='AlumnaAdalab')
+
+cursor = sql.cursor()
+limpieza_error = "UPDATE data_sql SET  = 'null' WHERE  = 'ERROR'"
+
+try:
+    cursor.execute(limpieza_error)
+    sql.commit()
+    print(cursor.rowcount, "registro/s modificado/s.")
+
+except mysql.connector.Error as err:
+    print(err)
+    print("Error Code:", err.errno)
+    print("SQLSTATE", err.sqlstate)
+    print("Message", err.msg)
+
+
+cursor.execute("SELECT * FROM data_sql LIMIT 12")  
+resultado = cursor.fetchall()
+df = pd.DataFrame(resultado)
+print(df)
