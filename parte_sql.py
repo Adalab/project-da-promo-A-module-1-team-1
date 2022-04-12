@@ -52,3 +52,5 @@ cursor.execute("SELECT * FROM data_sql LIMIT 12")
 resultado = cursor.fetchall()
 df = pd.DataFrame(resultado)
 print(df)
+
+sql.close()
